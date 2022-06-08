@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="vertex-shader" type="glsl">
+        #version 300 es
+
+        uniform float u_PointSize;
+
+        in vec2 position;
+
+        void main() {
+            gl_Position = vec4(position, 0, 1);
+            gl_PointSize = u_PointSize;
+        }
+    </script>
+    <script id="fragment-shader" type="glsl">
+        #version 300 es
+
+        precision highp float;
+
+        out vec4 color;
+
+        void main() {
+            color = vec4(1, 1, 1, 1);
+        }
+    </script>
+    <title>GLPhysSim</title>    
+</head>
+<body>
+    <canvas id="main" height="1000" width="1000"></canvas>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>

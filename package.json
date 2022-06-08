@@ -1,0 +1,10 @@
+{
+  "name": "glphyssim",
+  "dependencies": {
+    "twgl.js": "^4.22.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.0",
+    "serve": "^13.0.2"
+  }
+}
